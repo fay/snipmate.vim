@@ -75,3 +75,20 @@ snippet gett
 
 snippet con
 	console.log(${1})
+
+snippet model
+	var ${1} = Backbone.Model.extend({});
+
+snippet collection
+	var ${1} = Backbone.Collection.extend({});
+
+snippet router
+	var AppRouter = Backbone.Router.extend({
+		routes : {
+			"" : "load_data",
+		},
+		load_data : function () {
+		}
+	});
+	var router = new AppRouter();
+	Backbone.history.start({pushState: true, root: url});
